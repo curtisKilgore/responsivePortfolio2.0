@@ -91,9 +91,8 @@
 
     .portrait {
       width: 250px;
-      height: 300px;
-      background: url("../img/starWarsLand.png");
-      // next two make it a circle
+      height: 250px;
+      background: url("../img/portrait.jpg");
       border-radius: 50%;
       border: solid 3px $secondary-color;
     }
@@ -107,6 +106,10 @@
       // Slide in from right
       transform: translate3d(0, 0, 0);
     }
+
+    &.current > a {
+      color: $secondary-color;
+    }
   }
 
   .nav-link {
@@ -119,6 +122,10 @@
     color: #fff;
     text-decoration: none;
     @include easeOut;
+
+    &:hover {
+      color: $secondary-color;
+    }
   }
 }
 // Delay each nav item slide by 0.1s
